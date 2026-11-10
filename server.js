@@ -4,7 +4,7 @@ const path = require('path');
 
 const app = express();
 app.use(express.json({ limit: '100kb' }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 const KEY = process.env.GEMINI_KEY;
 const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
